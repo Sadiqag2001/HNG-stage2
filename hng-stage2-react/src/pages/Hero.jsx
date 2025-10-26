@@ -8,13 +8,6 @@ const Hero = () => {
   return (
     <div>
     <section className='w-full max-w-[1440px] bg-(--color-text) h-screen pt-10 items-center text-(--beige) px-5 flex flex-col mx-auto gap-2'>
-         <div className="absolute top-10 left-10 w-24 h-24 rounded-full bg-(--beige)/20 blur-md"></div>
-             <div className="absolute top-20 left-40 w-24 h-24 rounded-full bg-(--beige)/20 blur-sm"></div>
-             <div className="absolute top-60 left-80 w-24 h-24 rounded-full bg-(--beige)/20 blur-sm"></div>
-             <div className="absolute top-80 left-100 w-24 h-24 rounded-full bg-(--beige)/20 blur-sm"></div>
-             <div className="absolute top-100 left-40 w-24 h-24 rounded-full bg-(--beige)/20 blur-sm"></div>
-
-
       <main className='flex justify-between pt-5 w-full items-center flex-row gap-5'> 
         <div className='w-[65%] sm:w-full text-center'>
             <h2 className='font-northern sm:text-6xl md:text-9xl'>TixFirm</h2>
