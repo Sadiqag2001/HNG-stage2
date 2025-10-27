@@ -4,7 +4,7 @@ import { IoEye, IoEyeOff } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import useAuthStore from "../store/useAuthStore";
 import bgimg from "../assets/bgImg0.jpg"
-
+import { useLocation } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -17,6 +17,8 @@ const Login = () => {
 
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+  const location = useLocation();
+  const message = location.state?.message;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,6 +42,9 @@ const Login = () => {
 
   return (
     <div className="w-full h-screen bg-(--beige) pt-30 flex items-center justify-center">
+      {message && (
+        <p className="text-red-400 mb-3 text-center">{message}</p>
+      )}
       <div className="w-[80%] h-[95%] flex flex-col md:flex-row rounded-xl p-4 bg-(--color-text)">
         
         <div style={{ backgroundImage: `url(${bgimg})` }} className="hidden md:block w-[50%] relative bg-cover bg-center overflow-hidden rounded-xl">

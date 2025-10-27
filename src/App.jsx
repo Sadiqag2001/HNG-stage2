@@ -12,6 +12,7 @@ import AddTicket from './components/AddTicket'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Toaster } from "react-hot-toast";
 import ViewTicket from './pages/ViewTicket'
+import ProtectedRoute from './components/ProtectedRoute'
 
 function Home(){
   return(
@@ -36,13 +37,13 @@ function App() {
              <div className="absolute top-100 left-130 w-40 h-40 rounded-full bg-(--beige)/20"></div>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/register" element={<Register />} />
+            <Route path="/register" element={<ProtectedRoute><Register /></ProtectedRoute>} />
             <Route path="/login" element={<Login />} />
             <Route path='/contact' element={<ContactUs />} />
-            <Route path='/ticket' element={<Ticket />} />
-            <Route path="/add-ticket" element={<AddTicket />} />
-            <Route path='/dashboard' element={<Dashboard />} />
-            <Route path="/ticket/:id" element={<ViewTicket />} />
+            <Route path='/ticket' element={<ProtectedRoute><Ticket /></ProtectedRoute>} /> 
+            <Route path="/add-ticket" element={<ProtectedRoute><AddTicket /></ProtectedRoute>} />
+            <Route path='/dashboard' element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+            <Route path="/ticket/:id" element={<ProtectedRoute><ViewTicket /></ProtectedRoute>} />
 
           </Routes>
         </main>

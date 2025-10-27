@@ -5,7 +5,7 @@ const DeleteTicketModal = ({ isOpen, onClose, onConfirm }) => {
 
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50">
-      <div className="bg-white rounded-lg p-6 text-black w-[90%] max-w-md">
+      <div className="bg-(--color-text) rounded-lg p-6 text-(--beige) w-[90%] max-w-md">
         <h2 className="text-xl font-semibold mb-4">
           Confirm Ticket Deletion
         </h2>
@@ -15,14 +15,14 @@ const DeleteTicketModal = ({ isOpen, onClose, onConfirm }) => {
 
         <div className="flex justify-end gap-3">
           <button
-            className="px-4 py-2 bg-gray-300 text-black rounded hover:bg-gray-400"
+            className="px-4 py-2 bg-(--beige) text-(--color-text) rounded hover:bg-(--beige)/80"
             onClick={onClose}
           >
             Cancel
           </button>
 
           <button
-            className="px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700"
+            className="px-4 py-2 border border-red-600 text-red-600 rounded hover:border-red-700"
             onClick={onConfirm}
           >
             Delete Ticket

@@ -14,8 +14,8 @@ const Hero = () => {
             <h1 className='lg:text-xl md:text-lg sm:text-lg'>Take control of every request with a ticketing solution designed for speed, clarity, and insight. Tix-Firm automates workflows, eliminates chaos, and empowers support teams to provide exceptional service—no matter the scale.</h1>
         </div>
         <div className='sm:w-full sm:items-center justify-center flex bg-(--color-text) flex-row gap-3'>
-            <button  onClick={() => navigate("/login")} className='border cursor-pointer bg-(--beige) hover:bg-(--beige)/80 text-xl text-(--color-text) px-3 py-3 rounded-lg'>LOGIN</button>
-            <button className='border cursor-pointer bg-(--beige) hover:bg-(--beige)/80 text-xl text-(--color-text) px-3 py-3 rounded-lg'>GET STARTED</button>
+            {/* <button className='border cursor-pointer bg-(--beige) hover:bg-(--beige)/80 text-xl text-(--color-text) px-3 py-3 rounded-lg'>LOGIN</button> */}
+            <button  onClick={() => navigate("/login")} className='border cursor-pointer bg-(--beige) hover:bg-(--beige)/80 text-xl text-(--color-text) px-3 py-3 rounded-lg'>GET STARTED</button>
         </div>
       </main>
        <svg

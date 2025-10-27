@@ -22,7 +22,8 @@ const NavBar = () => {
         <p onClick={() => navigate("/")} className="hover:text-(--color-text)/80">
           Home
         </p>
-        <p onClick={() => navigate("/dashboard")} className="hover:text-(--color-text)/80">
+        <p onClick={() => navigate("/dashboard")} disabled={!user}
+  className={!user ? "opacity-40 cursor-not-allowed" : "" } >
           Dashboard
         </p>
         <p
